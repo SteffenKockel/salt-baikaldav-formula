@@ -1,5 +1,4 @@
 
-php_version: 56
 wwwserver: nginx
 packages: []
 baikal_instance_defaults:
