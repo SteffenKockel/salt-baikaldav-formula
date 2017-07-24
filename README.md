@@ -16,7 +16,7 @@ Automatic Install for baikaldav with salt
 
 ### Dependency installation
 
-From `pillar.example`. Define packages to install in your pillar. Ommiting `packages` will do no harm.
+From `pillar.example`. Define packages to install in your pillar. Ommiting `packages` will do no harm. The package names give a strong hint to the `php`,`python` and `mysql` packages needed for baikal and this formula to work.
 
 ```
 baikal:
