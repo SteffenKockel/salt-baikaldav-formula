@@ -6,8 +6,6 @@ Automatic Install for baikaldav with salt
 
 * CentOS6
 * PHP56
-* epel-repo enabled
-* webtatic-repo enabled
 
 ## server side ependencies
 
@@ -16,9 +14,18 @@ Automatic Install for baikaldav with salt
 * wget
 * nginx
 
+### Dependency installation
+
+From `pillar.example`. Define packages to install in your pillar. Ommiting `packages` will do no harm.
+
+```
+baikal:
+  packages: [ 'php-fpm', 'php-pdo', 'php-mysql', 'php-xml', 'php-mbstring' , 'mysql-server', 'python-mysqldb']
+```
+
 ## define Baikal instances
 
-from `pillar.example`. Lines starting with `#` are not needed, but configurable for each instance.
+From `pillar.example`. Lines starting with `#` are not needed, but configurable for each instance.
 
 ```
 baikal:
