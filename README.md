@@ -6,6 +6,8 @@ Automatic Install for baikaldav with salt
 
 * CentOS6
 * PHP56
+* epel-repo enabled
+* webtatic-repo enabled
 
 ## server side ependencies
 
@@ -37,7 +39,7 @@ baikal:
 
 ## Delete baikaldav instances
 
-* Define `nuke: True` in your pillar
+* Define `nuke: True` in your pillar for any defined instance you want to nuke.
 * run `salt-ssh my.host.name state.apply baikaldav.nuke`
 
 ## Reset admin password
