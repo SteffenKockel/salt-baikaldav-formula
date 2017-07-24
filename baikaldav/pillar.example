@@ -1,4 +1,5 @@
 baikal:
+  packages: [ 'php-fpm', 'php-pdo', 'php-mysql', 'php-xml', 'php-mbstring' , 'mysql-server', 'python-mysqldb']
   baikal_instances:
     customername:
       server_names: me.myself.i

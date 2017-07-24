@@ -1,6 +1,7 @@
 
 php_version: 56
 wwwserver: nginx
+packages: []
 baikal_instance_defaults:
   default_server: False
   basedir: /var/www/baikal
