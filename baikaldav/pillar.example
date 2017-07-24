@@ -2,14 +2,24 @@ baikal:
   packages: [ 'php-fpm', 'php-pdo', 'php-mysql', 'php-xml', 'php-mbstring' , 'mysql-server', 'python-mysqldb']
   baikal_instances:
     customername:
-      server_names: me.myself.i
-      #basedir: /var/www/baikal
       #default_server: False
+      #nuke: False
+      #basedir: /var/www/baikal
       #wwwuser: apache
       #wwwgroup: apache
+      #version: 0.4.6 # used as tag to checkout!
+      #port: 80
+      #ssl_enabled: False
+      #sslcert: 
+      #sslkey:
+      #source_url: https://github.com/fruux/Baikal.git
+      #template: salt://baikaldav/etc/nginx/conf.d/baikaldav.conf
+      server_names: my.server.name
       admin_password: Insecure
       baikal_encryption_key: ALeiseewoh4uo1iem6eiZoathoo5ieRa # pwgen 32
+      auth_realm: {{ grains['fqdn'] }}
+      dbhost: 127.0.0.1
       dbname: baikal
       dbuser: baikal
-      dbpass: Insecure
-      auth_realm: My Calendar
+      dbpass: Hallo123
+      
