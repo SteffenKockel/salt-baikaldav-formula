@@ -6,6 +6,8 @@ Automatic Install for baikaldav with salt
 
 * CentOS6
 * PHP56
+* epel-repo enabled
+* webtatic-repo enabled
 
 ## server side ependencies
 
