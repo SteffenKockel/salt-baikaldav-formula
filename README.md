@@ -40,3 +40,7 @@ baikal:
 * Define `nuke: True` in your pillar
 * run `salt-ssh my.host.name state.apply baikaldav.nuke`
 
+## Reset admin password
+
+Change admin password value in your pillar and re-run the `baikaldav`-state with salt.
+
