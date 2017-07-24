@@ -7,7 +7,7 @@ Automatic Install for baikaldav with salt
 * CentOS6
 * PHP56
 
-## server side ependencies
+## Server side dependencies
 
 * MariaDB or Mysql
 * python-mysql bindings 
@@ -23,7 +23,7 @@ baikal:
   packages: [ 'php-fpm', 'php-pdo', 'php-mysql', 'php-xml', 'php-mbstring' , 'mysql-server', 'python-mysqldb']
 ```
 
-## define Baikal instances
+## Define baikaldav instances
 
 From `pillar.example`. Lines starting with `#` are not needed, but configurable for each instance.
 
