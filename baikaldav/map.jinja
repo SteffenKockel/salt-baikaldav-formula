@@ -1,0 +1,30 @@
+{% import_yaml 'baikaldav/defaults.yaml' as defaults %}
+
+{% set os_family_map = salt['grains.filter_by']({
+  'Debian': {
+    
+      'server': 'nginx',
+      'service': 'nginx',
+      'conf_d': '/etc/nginx/sites-enabled'
+  },
+  'RedHat': {
+      'server': 'nginx',
+      'service': 'nginx',
+      'conf_d': '/etc/nginx/conf.d',
+      'packages': [ 'php56w-fpm', 'php56w-pdo', 'php56w-mysql', 'php56w-xml', 'php56w-mbstring']
+  }
+}, 
+grain="os_family",
+merge=salt['pillar.get']('baikal')
+) %}
+
+{% do defaults.update(os_family_map) %}
+
+{% set baikal = salt['pillar.get'](
+        'baikal',
+        default=defaults,
+        merge=True
+    )
+%}
+
+

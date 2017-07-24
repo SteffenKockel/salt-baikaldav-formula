@@ -1,0 +1,31 @@
+
+php_version: 56
+wwwserver: nginx
+baikal_instance_defaults:
+  default_server: False
+  basedir: /var/www/baikal
+  fulldir: /var/www/baikal/defaultinstance
+  wwwuser: apache
+  wwwgroup: apache
+  db_prefix: customer_A
+  server_names: baikaldav.{{salt['grains.get']('fqdn')}}
+  version: 0.4.6 # used as tag to checkout!
+  port: 80
+  ssl_enabled: False
+  sslcert: 
+  sslkey:
+  sslchain:
+  source_url: https://github.com/fruux/Baikal.git
+  template: salt://baikaldav/etc/nginx/conf.d/baikaldav.conf
+  admin_user: admin # Must not be changed!
+  admin_password: Insecure
+  baikal_encryption_key: ALeiseewoh4uo1iem6eiZoathoo5ieRa # pwgen 32
+  auth_realm: {{ grains['fqdn'] }}
+  dbhost: 127.0.0.1
+  dbname: baikal
+  dbuser: baikal
+  dbpass: Hallo123
+  nuke: False
+baikal_instances:
+  defaultinstance:
+    www_group: nginx

@@ -1,0 +1,14 @@
+baikal:
+  baikal_instances:
+    customername:
+      server_names: me.myself.i
+      #basedir: /var/www/baikal
+      #default_server: False
+      #wwwuser: apache
+      #wwwgroup: apache
+      admin_password: Insecure
+      baikal_encryption_key: ALeiseewoh4uo1iem6eiZoathoo5ieRa # pwgen 32
+      dbname: baikal
+      dbuser: baikal
+      dbpass: Insecure
+      auth_realm: My Calendar
